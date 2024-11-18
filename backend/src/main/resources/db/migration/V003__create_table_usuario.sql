@@ -1,0 +1,10 @@
+CREATE TABLE usuario (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL,
+  descricao VARCHAR(500),
+  id_tipo_usuario INT NOT NULL,
+  login VARCHAR(50) UNIQUE NOT NULL,
+  senha VARCHAR(50) NOT NULL,
+
+  FOREIGN KEY (id_tipo_usuario) REFERENCES tipo_usuario(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
