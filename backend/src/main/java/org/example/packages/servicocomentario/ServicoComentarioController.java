@@ -18,5 +18,4 @@ public class ServicoComentarioController {
     void create(@RequestBody ServicoComentarioRequest servicoComentarioRequest) {
         servicoComentarioService.create(servicoComentarioRequest);
     }
-
 }

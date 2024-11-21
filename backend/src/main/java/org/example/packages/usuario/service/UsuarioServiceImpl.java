@@ -32,6 +32,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     public void create(UsuarioCreateRequest usuarioCreateRequest) {
         Usuario usuario = new Usuario();
 
+        usuario.setNome(usuarioCreateRequest.getNome());
         usuario.setSenha(usuarioCreateRequest.getSenha());
         usuario.setLogin(usuarioCreateRequest.getLogin());
         usuario.setDescricao(usuarioCreateRequest.getDescricao());

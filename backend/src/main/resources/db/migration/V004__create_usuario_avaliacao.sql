@@ -1,7 +1,7 @@
 CREATE TABLE usuario_avaliacao (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  id_usuario INT NOT NULL,
+  usuario_id INT NOT NULL,
   nota INT,
 
-  FOREIGN KEY (id_usuario) REFERENCES usuario(id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (usuario_id) REFERENCES usuario(id) ON DELETE CASCADE ON UPDATE CASCADE
 );

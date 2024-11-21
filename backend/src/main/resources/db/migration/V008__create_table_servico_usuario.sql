@@ -1,11 +1,11 @@
 CREATE TABLE servico_usuario (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  id_usuario INT NOT NULL,
-  id_usuario_criador INT NOT NULL,
-  id_servico INT NOT NULL,
+  usuario_id INT NOT NULL,
+  usuario_criador_id INT NOT NULL,
+  servico_id INT NOT NULL,
   valor DECIMAL(15, 2),
 
-  FOREIGN KEY (id_usuario) REFERENCES usuario(id) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (id_usuario_criador) REFERENCES usuario(id) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (id_servico) REFERENCES servico(id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (usuario_id) REFERENCES usuario(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (usuario_criador_id) REFERENCES usuario(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (servico_id) REFERENCES servico(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
