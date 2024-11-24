@@ -10,5 +10,6 @@ import java.util.List;
 public interface ServicoEspecialidadeRepository extends JpaRepository<ServicoEspecialidade, Integer> {
 
 
-     List<Especialidade> findByServico(Servico servico);
+     @Query("SELECT se.especialidade FROM ServicoEspecialidade se WHERE se.servico = :servico")
+     List<Especialidade> findEspecialidadeByServico(Servico servico);
 }

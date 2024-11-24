@@ -30,6 +30,6 @@ public class ServicoEspecialidadeServiceImpl implements ServicoEspecialidadeServ
 
     @Override
     public List<Especialidade> findByServico(Servico servico) {
-        return servicoEspecialidadeRepository.findByServico(servico);
+        return servicoEspecialidadeRepository.findEspecialidadeByServico(servico);
     }
 }

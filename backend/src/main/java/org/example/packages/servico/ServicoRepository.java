@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ServicoRepository extends JpaRepository<Servico, Integer> {
 
-    @Query("select s from Servico s "
+    @Query("select distinct s from Servico s "
             + "join ServicoEspecialidade se on se.servico = s "
             + "left join ServicoUsuario su on su.servico = s "
             + "where su is null "
